@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { StarIcon } from "@heroicons/react/20/solid";
 import Rating from "@mui/material/Rating";
 import Button from "@mui/material/Button";
@@ -12,6 +13,16 @@ import { useEffect, useState } from "react";
 import { findProductsById } from "../../../State/Product/Action";
 import { store } from "../../../State/store";
 import { addItemToCart } from "../../../State/Cart/Action";
+=======
+import { LinearProgress } from "@mui/material";
+import Button from "@mui/material/Button";
+import Rating from "@mui/material/Rating";
+import HomeSectionCard from "../HomeSectionCard/HomeSectionCard";
+import { mens_kurta } from "./../../../Data/mens_kurta";
+import ProductReviewCard from "./ProductReviewCard";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
 
 const product = {
   name: "Basic Tee 6-Pack",
@@ -23,6 +34,7 @@ const product = {
   ],
   images: [
     {
+<<<<<<< HEAD
       src: "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-secondary-product-shot.jpg",
       alt: "Two each of gray, white, and black shirts laying flat.",
     },
@@ -36,6 +48,25 @@ const product = {
     },
     {
       src: "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-featured-product-shot.jpg",
+=======
+      src:
+        "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-secondary-product-shot.jpg",
+      alt: "Two each of gray, white, and black shirts laying flat.",
+    },
+    {
+      src:
+        "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg",
+      alt: "Model wearing plain black basic tee.",
+    },
+    {
+      src:
+        "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg",
+      alt: "Model wearing plain gray basic tee.",
+    },
+    {
+      src:
+        "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-featured-product-shot.jpg",
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
       alt: "Model wearing plain white basic tee.",
     },
   ],
@@ -80,6 +111,7 @@ function classNames(...classes) {
 }
 
 export default function ProductDetails() {
+<<<<<<< HEAD
   const [selectedSize, setSelectedSize] = useState("");
   const navigate = useNavigate();
   const params = useParams();
@@ -98,6 +130,14 @@ export default function ProductDetails() {
     dispatch(findProductsById(params.productId));
   }, [params.productId]);
 
+=======
+const[selectedColor,setSelectedColor]=useState(product.colors[0]);
+const navigate=useNavigate();
+
+const handleAddToCart=()=>{
+navigate("/cart")
+}
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
   return (
     <div className="bg-white lg:px-20">
       <div className="pt-6">
@@ -146,7 +186,11 @@ export default function ProductDetails() {
             <div className="overflow-hidden rounded-lg max-w-[30rem] max-h-[30rem]">
               <img
                 alt={product.images[0].alt}
+<<<<<<< HEAD
                 src={products.product?.imageUrl}
+=======
+                src={product.images[0].src}
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
                 className="row-span-2 aspect-3/4 size-full rounded-lg object-cover max-lg:hidden"
               />
             </div>
@@ -170,10 +214,17 @@ export default function ProductDetails() {
           <div className="lg:col-span-1 maxt-auto max-w-2xl px-4 pb-16 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-24">
             <div className="lg:col-span-2">
               <h1 className="text-lg lg:text-xl font-semibold text-gray-900">
+<<<<<<< HEAD
                 {products.product?.brand}
               </h1>
               <h1 className="text-lg lg:text-xl text-gray-900 opacity-60 pt-1">
                 {products.product?.title}
+=======
+                Universal Outfit
+              </h1>
+              <h1 className="text-lg lg:text-xl text-gray-900 opacity-60 pt-1">
+                Casual Puff Sleeves Women White Top
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
               </h1>
             </div>
 
@@ -182,6 +233,7 @@ export default function ProductDetails() {
               <h2 className="sr-only">Product information</h2>
 
               <div className="flex space-x-5 items-center text-lg lg:text-xl text-gray-900  mt-6">
+<<<<<<< HEAD
                 <p className="font-semibold">
                   {products.product?.discountedPrice}
                 </p>
@@ -191,6 +243,11 @@ export default function ProductDetails() {
                 <p className="text-green-600 font-semibold">
                   {products.product?.discountPercent}% Off
                 </p>
+=======
+                <p className="font-semibold">₹199</p>
+                <p className="opacity-50 line-through">₹211</p>
+                <p className="text-green-600 font-semibold">5% Off</p>
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
               </div>
 
               {/* Reviews */}
@@ -225,6 +282,7 @@ export default function ProductDetails() {
                           className="group relative flex items-center justify-center rounded-md border border-gray-300 bg-white p-3 has-checked:border-indigo-600 has-checked:bg-indigo-600 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 has-disabled:border-gray-400 has-disabled:bg-gray-200 has-disabled:opacity-25"
                         >
                           <input
+<<<<<<< HEAD
                             type="radio"
                             name="size"
                             value={size.name}
@@ -234,6 +292,15 @@ export default function ProductDetails() {
                             className="absolute inset-0 appearance-none focus:outline-none disabled:cursor-not-allowed"
                           />
 
+=======
+                            defaultValue={size.id}
+                            defaultChecked={size === product.sizes[2]}
+                            name="size"
+                            type="radio"
+                            disabled={!size.inStock}
+                            className="absolute inset-0 appearance-none focus:outline-none disabled:cursor-not-allowed"
+                          />
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
                           <span className="text-sm font-medium text-gray-900 uppercase group-has-checked:text-white">
                             {size.name}
                           </span>
@@ -244,7 +311,11 @@ export default function ProductDetails() {
                 </div>
 
                 <Button
+<<<<<<< HEAD
                   onClick={handleAddToCart}
+=======
+                onClick={handleAddToCart}
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
                   variant="contained"
                   color="secondary"
                   sx={{ px: "1rem", py: "0.5rem", marginTop: "1rem" }}
@@ -310,7 +381,11 @@ export default function ProductDetails() {
               </div>
 
               {/* RIGHT: Product Ratings Summary */}
+<<<<<<< HEAD
               <div className="flex-2 flex flex-col justify-center">
+=======
+              <div className="flex-2 flex flex-col justify-center ml-70 mb-110">
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
                 <h2 className="text-xl font-semibold pb-2">Product Ratings</h2>
 
                 <div className="flex items-center space-x-5 mb-5">
@@ -413,8 +488,14 @@ export default function ProductDetails() {
           </div>
         </section>
 
+<<<<<<< HEAD
         <section className="pt-10">
           <h1>Similar Products</h1>
+=======
+        {/* Similar Products */}
+        <section className="pt-10">
+          <h1 className="py-5 text-xl font-bold">Similar Products</h1>
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
           <div className="flex flex-wrap space-y-5 gap-8">
             {mens_kurta.map((item) => (
               <HomeSectionCard product={item} />

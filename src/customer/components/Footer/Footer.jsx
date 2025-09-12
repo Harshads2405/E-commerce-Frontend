@@ -20,8 +20,13 @@ const Footer = () => {
           </Typography>
           {["About", "Blogs", "Press", "Jobs", "Partners"].map((text) => (
             <div key={text}>
+<<<<<<< HEAD
               <Button className="" color="inherit">
                 <Typography variant="body3">{text}</Typography>
+=======
+              <Button className="pb-2" color="inherit">
+                <Typography variant="body1">{text}</Typography>
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
               </Button>
             </div>
           ))}
@@ -35,8 +40,13 @@ const Footer = () => {
           {["Contact Us", "Help Center", "Privacy Policy", "Terms"].map(
             (text) => (
               <div key={text}>
+<<<<<<< HEAD
                 <Button className="" color="inherit">
                   <Typography variant="body3">{text}</Typography>
+=======
+                <Button className="pb-2" color="inherit">
+                  <Typography variant="body1">{text}</Typography>
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
                 </Button>
               </div>
             )
@@ -50,8 +60,13 @@ const Footer = () => {
           </Typography>
           {["Payments", "Shipping", "Returns", "FAQ"].map((text) => (
             <div key={text}>
+<<<<<<< HEAD
               <Button className="" color="inherit">
                 <Typography variant="body3">{text}</Typography>
+=======
+              <Button className="pb-2" color="inherit">
+                <Typography variant="body1">{text}</Typography>
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
               </Button>
             </div>
           ))}
@@ -64,8 +79,13 @@ const Footer = () => {
           </Typography>
           {["Facebook", "Twitter", "Instagram", "LinkedIn"].map((text) => (
             <div key={text}>
+<<<<<<< HEAD
               <Button className="" color="inherit">
                 <Typography variant="body3">{text}</Typography>
+=======
+              <Button className="pb-2" color="inherit">
+                <Typography variant="body1">{text}</Typography>
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
               </Button>
             </div>
           ))}
@@ -83,11 +103,19 @@ const Footer = () => {
         }}
       >
         <Typography variant="body2">
+<<<<<<< HEAD
           © {new Date().getFullYear()} Shop. All rights reserved.
+=======
+          © {new Date().getFullYear()} Harshad Shinde. All rights reserved.
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
         </Typography>
       </Box>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default Footer;
+=======
+export default Footer;
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e

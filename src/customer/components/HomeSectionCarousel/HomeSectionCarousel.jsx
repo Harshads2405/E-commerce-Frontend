@@ -4,11 +4,19 @@ import { useRef, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import HomeSectionCard from "../HomeSectionCard/HomeSectionCard";
 
+<<<<<<< HEAD
 const HomeSectionCarousel = ({ data, sectionName }) => {
   const responsive = {
     0: { items: 1 },
     720: { items: 3 },
     1024: { items: 4 },
+=======
+const HomeSectionCarousel = ({data,sectionName}) => {
+  const responsive = {
+    0: { items: 1 },
+    720: { items: 3 },
+    1024: { items: 5.5 },
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
   };
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -33,9 +41,15 @@ const HomeSectionCarousel = ({ data, sectionName }) => {
     .map((item, i) => <HomeSectionCard key={i} product={item} />);
 
   return (
+<<<<<<< HEAD
     <div className="bg-white rounded-lg shadow shadow-gray-500 p-5">
       <h2 className="text-2xl font-extrabold text-gray-900">{sectionName}</h2>
       <div className="relative mx-5">
+=======
+    <div className="bg-white rounded-lg shadow">
+      <h2 className="text-2xl font-extrabold text-gray-900 py-5">{sectionName}</h2>
+      <div className="relative p-5">
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
         <AliceCarousel
           ref={carouselRef}
           items={items}
@@ -87,5 +101,8 @@ const HomeSectionCarousel = ({ data, sectionName }) => {
     </div>
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
 export default HomeSectionCarousel;

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import React from "react";
+=======
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
 import FiberManualRecordTwoToneIcon from "@mui/icons-material/FiberManualRecordTwoTone";
 import { useNavigate } from "react-router-dom";
 
@@ -11,14 +14,23 @@ const OrderCard = () => {
     >
       <div className="flex justify-between items-center w-full">
         {/* Product Info */}
+<<<<<<< HEAD
         <div className="flex items-center cursor-pointer min-w-0 max-w-[50%]">
+=======
+        <div className="flex items-center cursor-pointer min-w-0 max-w-[50%] space-x-4">
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
           <img
             className="w-[5rem] h-[5rem] object-cover object-top flex-shrink-0"
             src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-secondary-product-shot.jpg"
             alt=""
           />
+<<<<<<< HEAD
           <div className="ml-5 space-y-2 overflow-hidden">
             <p className="truncate">Universal Outfit</p>
+=======
+          <div className="ml-5 space-y-2 overflow-hidden ">
+            <p className="truncate font-semibold">Universal Outfit</p>
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
             <p className="opacity-50 text-xs font-semibold">Size : M</p>
             <p className="opacity-50 text-xs font-semibold">Color : Black</p>
           </div>

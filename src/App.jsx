@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "./App.css";
 import Navigation from "./customer/components/Navigation/Navigation";
 import HomePage from "./customer/pages/HomePage/HomePage";
@@ -20,6 +21,32 @@ function App() {
         <Route path="/admin/*" element={<AdminRouters />}></Route>
       </Routes>
     </>
+=======
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import CustomerRouters from "./Routers/CustomerRouters";
+import HomePage from "./customer/pages/HomePage/HomePage";
+import Product from "./customer/components/Product/Product";
+function App() {
+  return (
+    <div className="">
+      <Routes>
+        <Route path="/*" element={<CustomerRouters />}></Route>
+      </Routes>
+
+      <div>
+        {/* <HomePage />
+        <Product />
+        <ProductCard />
+        <ProductDetails />
+        <Cart />
+        <Checkout />
+        <DeliveryAddressForm />
+        <Order />
+        <OrderDetails /> */}
+      </div>
+    </div>
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
   );
 }
 

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "./ProductCard.css";
+<<<<<<< HEAD
 
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
@@ -13,10 +14,21 @@ const ProductCard = ({ product }) => {
         <img
           className="h-full w-full object-cover"
           src={product.imageUrl}
+=======
+const ProductCard = ({ product }) => {
+  const navigate=useNavigate();
+  return (
+    <div onClick={()=>navigate(`/product/${5}`)} className="productCard w-[15rem] m-3 transition-all cursor-pointer">
+      <div className="h-[20rem]">
+        <img
+          className="h-full w-full object-cover object-left-top"
+          src={product.image}
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
           alt={product.title}
         />
       </div>
 
+<<<<<<< HEAD
       {/* Product Info Section */}
       <div className="textPart p-3 space-y-2">
         {/* Brand Name */}
@@ -33,6 +45,16 @@ const ProductCard = ({ product }) => {
             {product.discountPersent}% Off
           </p>
         </div>
+=======
+      <div className="textPart bg-white p-3"></div>
+      <p className="font-bold opacity-60">{product.brand}</p>
+      <p>{product.title}</p>
+
+      <div className="flex item-center space-x-2">
+        <p className="font-semibold">{product.selling_price}</p>
+        <p className="line-through  opacity-50">{product.price}</p>
+        <p className="text-green-600 font-semibold">{product.disscount}</p>
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
       </div>
     </div>
   );

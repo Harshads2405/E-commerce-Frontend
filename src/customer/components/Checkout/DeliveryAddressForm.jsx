@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // DeliveryAddressForm.jsx
 import React from "react";
 import { Box, Button, Paper, TextField } from "@mui/material";
@@ -28,6 +29,35 @@ const DeliveryAddressForm = ({ onDeliverHere }) => {
 
   return (
     <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
+=======
+import { Box, Button, Paper, TextField } from "@mui/material";
+import AddressCard from "../AddressCard/AddressCard";
+
+const DeliveryAddressForm = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const address = {
+      firstName: data.get("firstName"),
+      lastName: data.get("lastName"),
+      address: data.get("address"),
+      city: data.get("city"),
+      state: data.get("state"),
+      zip: data.get("zip"),
+      phoneNumber: data.get("phoneNumber"),
+    };
+    console.log("Address Submit", address);
+  };
+
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        mt: 3,
+      }}
+    >
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
       <Paper
         elevation={3}
         sx={{
@@ -40,7 +70,11 @@ const DeliveryAddressForm = ({ onDeliverHere }) => {
           overflow: "hidden",
         }}
       >
+<<<<<<< HEAD
         {/* Left side: show entered address preview */}
+=======
+        {/* Left side */}
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
         <Box
           sx={{
             flex: { xs: "none", md: "1 1 50%" },
@@ -50,6 +84,7 @@ const DeliveryAddressForm = ({ onDeliverHere }) => {
             minWidth: 300,
           }}
         >
+<<<<<<< HEAD
           <AddressCard address={editingAddress} />
           <Button
             variant="contained"
@@ -63,6 +98,20 @@ const DeliveryAddressForm = ({ onDeliverHere }) => {
         </Box>
 
         {/* Right side: form */}
+=======
+          <AddressCard />
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            sx={{ mt: 3, width: "100%" }}
+          >
+            Change Address
+          </Button>
+        </Box>
+
+        {/* Right side form of addres*/}
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
         <Box
           sx={{
             flex: { xs: "none", md: "1 1 50%" },
@@ -89,8 +138,11 @@ const DeliveryAddressForm = ({ onDeliverHere }) => {
                 autoComplete="given-name"
                 fullWidth
                 required
+<<<<<<< HEAD
                 value={editingAddress.firstName}
                 onChange={handleChange}
+=======
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
               />
               <TextField
                 label="Last Name"
@@ -98,20 +150,30 @@ const DeliveryAddressForm = ({ onDeliverHere }) => {
                 autoComplete="family-name"
                 fullWidth
                 required
+<<<<<<< HEAD
                 value={editingAddress.lastName}
                 onChange={handleChange}
+=======
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
               />
             </Box>
             <TextField
               label="Address"
+<<<<<<< HEAD
               name="streetAddress"
+=======
+              name="address"
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
               autoComplete="address"
               fullWidth
               multiline
               rows={4}
               required
+<<<<<<< HEAD
               value={editingAddress.streetAddress}
               onChange={handleChange}
+=======
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
             />
             <Box
               sx={{
@@ -128,8 +190,11 @@ const DeliveryAddressForm = ({ onDeliverHere }) => {
                 autoComplete="city"
                 fullWidth
                 required
+<<<<<<< HEAD
                 value={editingAddress.city}
                 onChange={handleChange}
+=======
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
               />
               <TextField
                 label="State/Province/Region"
@@ -137,8 +202,11 @@ const DeliveryAddressForm = ({ onDeliverHere }) => {
                 autoComplete="state"
                 fullWidth
                 required
+<<<<<<< HEAD
                 value={editingAddress.state}
                 onChange={handleChange}
+=======
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
               />
             </Box>
             <Box
@@ -152,6 +220,7 @@ const DeliveryAddressForm = ({ onDeliverHere }) => {
             >
               <TextField
                 label="Zip / Postal Code"
+<<<<<<< HEAD
                 name="zipCode"
                 autoComplete="zip"
                 fullWidth
@@ -167,16 +236,37 @@ const DeliveryAddressForm = ({ onDeliverHere }) => {
                 required
                 value={editingAddress.mobile}
                 onChange={handleChange}
+=======
+                name="zip"
+                autoComplete="zip"
+                fullWidth
+                required
+              />
+              <TextField
+                label="Phone Number"
+                name="phoneNumber"
+                autoComplete="phoneNumber"
+                fullWidth
+                required
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
               />
             </Box>
             <Button
               variant="contained"
+<<<<<<< HEAD
               color="secondary"
+=======
+              color="primary"
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
               size="large"
               sx={{ mt: 3, width: "100%" }}
               type="submit"
             >
+<<<<<<< HEAD
               Change Address
+=======
+              Deliver Here
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
             </Button>
           </form>
         </Box>

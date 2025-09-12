@@ -42,4 +42,8 @@ const Order = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Order;
+=======
+export default Order;
+>>>>>>> 0d76d507592fbaea1b7e9ae3d05a395549579c7e
